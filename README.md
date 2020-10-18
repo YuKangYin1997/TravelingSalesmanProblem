@@ -8,6 +8,8 @@ Student Number: 300162413
 
 Email: yyin050@uottawa.ca
 
+Java Version: 1.8
+
 
 
 ## 0. Download Project
