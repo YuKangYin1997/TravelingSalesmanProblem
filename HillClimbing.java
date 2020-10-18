@@ -164,24 +164,24 @@ public class HillClimbing {
 //        System.out.println(bestDistance);
 
         // Solution 3: First Ascent Hill Climbing
-//        HillClimbing hillClimbing = new HillClimbing();
-//        Travel startingTravel = graph.getRandomTravel();
-//        int timeThreshold = 10;
-//        Travel bestTravel = hillClimbing.hcFirstAscent(startingTravel, timeThreshold);
-//        int bestDistance = (int)bestTravel.getDistance();
-//        System.out.println(bestDistance);
+       HillClimbing hillClimbing = new HillClimbing();
+       Travel startingTravel = graph.getRandomTravel();
+       int timeThreshold = 10;
+       Travel bestTravel = hillClimbing.hcFirstAscent(startingTravel, timeThreshold);
+       int bestDistance = (int)bestTravel.getDistance();
+       System.out.println(bestDistance);
 
         // Solution 4: First Ascent Hill Climbing With Random Restart
-        int restartTimes = 5;
-        int timeThresholdForEachRestart = 10;
-        List<Travel> startingTravels = new ArrayList<>();
-        for (int times = 0; times < restartTimes; ++times) {
-            startingTravels.add(graph.getRandomTravel());
-        }
-        HillClimbing hillClimbing = new HillClimbing();
-        Travel bestTravel = hillClimbing.hcFirstAscentWithRandomRestart(startingTravels, timeThresholdForEachRestart);
-        int bestDistance = (int)bestTravel.getDistance();
-        System.out.println(bestDistance);
+//         int restartTimes = 5;
+//         int timeThresholdForEachRestart = 10;
+//         List<Travel> startingTravels = new ArrayList<>();
+//         for (int times = 0; times < restartTimes; ++times) {
+//             startingTravels.add(graph.getRandomTravel());
+//         }
+//         HillClimbing hillClimbing = new HillClimbing();
+//         Travel bestTravel = hillClimbing.hcFirstAscentWithRandomRestart(startingTravels, timeThresholdForEachRestart);
+//         int bestDistance = (int)bestTravel.getDistance();
+//         System.out.println(bestDistance);
 
         // write city indexes to solution.csv
         FileWriterUtil.writeBestTravelToCSVFile(solutionCSVFilePath, bestTravel);
