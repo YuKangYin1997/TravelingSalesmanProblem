@@ -46,9 +46,9 @@ public class SimulatedAnnealing {
 
     /**
      * Solution 1: Basic Simulated Annealing
-     * For a280.tsp bestDistance is Around 10000 when Operator is SWAP
-     * For a280.tsp bestDistance is Around 9000 when Operator is INSERT
-     * For a280.tsp bestDistance is Around 6000 when Operator is REVERSE
+     * For a280.tsp bestDistance is Around 6000 when Operator is SWAP
+     * For a280.tsp bestDistance is Around 4500 when Operator is INSERT
+     * For a280.tsp bestDistance is Around 3000 when Operator is REVERSE
      * @param startingTravel a random travel
      * @param startingTemperature
      * @param endingTemperature
@@ -90,9 +90,9 @@ public class SimulatedAnnealing {
 
     /**
      * Solution 2: Dynamic Simulated Annealing-Cooling Enhancer-Modified Acceptance Possibility Simulated Annealing
-     * For a280.tsp bestDistance is Around 4000 when Operator is SWAP
-     * For a280.tsp bestDistance is Around 3000 when Operator is INSERT
-     * For a280.tsp bestDistance is Around 2700 when Operator is REVERSE
+     * For a280.tsp bestDistance is Around 3300 when Operator is SWAP
+     * For a280.tsp bestDistance is Around 2800 when Operator is INSERT
+     * For a280.tsp bestDistance is Around 2600 when Operator is REVERSE
      * @param startingTravel a random travel
      * @param startingTemperature
      * @param endingTemperature
@@ -117,7 +117,7 @@ public class SimulatedAnnealing {
             double deltaDistance = neighbourDistance - currentDistance;
             double deltaDistance2 = bestEverDistance - neighbourDistance;
 
-            // modified acceptance possibility
+            // modified acceptance probability
             double p = (Math.exp(1) - deltaDistance / temperature) / (Math.exp(1) - deltaDistance2 / temperature);
 
             if (deltaDistance < 0) {
@@ -156,19 +156,19 @@ public class SimulatedAnnealing {
 //        Travel startingTravel = graph.getRandomTravel();
 //        double startingTemperature = 100000.0;
 //        double endingTemperature = 0.0001;
-//        double coolingRate = 0.001;
+//        double coolingRate = 0.0001;
 //        String operatorType = OperatorType.REVERSE;
 //        int timeThreshold = 5;
 //        Travel bestTravel = simulatedAnnealing.basicSA(startingTravel, startingTemperature, endingTemperature, coolingRate, operatorType, timeThreshold);
 //        int bestDistance = (int)bestTravel.getDistance();
 //        System.out.println(bestDistance);
 
-        // Solution 2 Dynamic Simulated Annealing-Cooling Enhancer-Modified Acceptance Possibility SA
+        // Solution 2 Dynamic Simulated Annealing-Cooling Enhancer-Modified Acceptance Probability SA
         SimulatedAnnealing simulatedAnnealing = new SimulatedAnnealing();
         Travel startingTravel = graph.getRandomTravel();
         double startingTemperature = 100000.0;
         double endingTemperature = 0.0001;
-        double coolingRate = 0.001;
+        double coolingRate = 0.0001;
         int numberOfCities = startingTravel.getCities().size();
         double coolingEnhancer = simulatedAnnealing.getCoolingEnhancer(numberOfCities);
         String operatorType = OperatorType.REVERSE;
