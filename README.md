@@ -208,7 +208,7 @@ I've only support one method for *TabuSearch* solution, the one delivered in the
 - Five parameters in *basic_SA* that you can modify
   - `startingTemperature` temperature at the beginning of *basic_SA*. Default 100000.0 for `a280.tsp`.
   - `endingTemperature` temperature at the end of *basic_SA*. Default 0.0001 for `a280.tsp`.
-  - `coolingRate` rate of cooling current temperature in *basic_SA*. Default 0.001 for `a280.tsp`.
+  - `coolingRate` rate of cooling current temperature in *basic_SA*. Default 0.0001 for `a280.tsp`.
   - `operatorType` method of finding neighbours in *basic_SA*. Default `REVERSE`  for `a280.tsp`.
   - `timeThreshold` maximum minutes we are allowed to spend on basic_SA. Default 5 for `a280.tsp`.
 
@@ -218,7 +218,7 @@ I've only support one method for *TabuSearch* solution, the one delivered in the
 
   - `startingTemperature` temperature at the beginning of *DSA_CE_MAP_SA*. Default 100000.0 for `a280.tsp`.
   - `endingTemperature` temperature at the end of *DSA_CE_MAP_SA*. Default 0.0001 for `a280.tsp`.
-  - `coolingRate` rate of cooling current temperature in *DSA_CE_MAP_SA*. Default 0.001 for `a280.tsp`.
+  - `coolingRate` rate of cooling current temperature in *DSA_CE_MAP_SA*. Default 0.0001 for `a280.tsp`.
   - `coolingEnhancer` enhancer for basic cooling strategy, adaptive to number of cities. Automatically set to 0.005 for `a280.tsp`.
   - `operatorType` method of finding neighbours in *DSA_CE_MAP_SA*. Default `REVERSE`  for `a280.tsp`.
   - `timeThreshold` maximum minutes we are allowed to spend on *DSA_CE_MAP_SA*. Default 5 for `a280.tsp`.
