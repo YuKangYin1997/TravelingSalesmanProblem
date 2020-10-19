@@ -154,7 +154,7 @@ public class SimulatedAnnealing {
         // Solution 1 Basic SA
 //        SimulatedAnnealing simulatedAnnealing = new SimulatedAnnealing();
 //        Travel startingTravel = graph.getRandomTravel();
-//        double startingTemperature = 10000.0;
+//        double startingTemperature = 100000.0;
 //        double endingTemperature = 0.0001;
 //        double coolingRate = 0.001;
 //        String operatorType = OperatorType.REVERSE;
